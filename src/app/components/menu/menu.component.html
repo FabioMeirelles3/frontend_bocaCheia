@@ -1,0 +1,68 @@
+<div class="container-xxl bg-white p-0">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+         <a href="/restaurant" class="navbar-brand p-2">
+             <img src="assets/img/icon.png" align="left"> <h1 class="text-primary m-1"> Boca Cheia</h1>
+         </a>
+         <div class="collapse navbar-collapse" id="navbarCollapse">
+             <div class="navbar-nav ms-auto py-0 pe-4">
+                 <a (click)="logoff()"class="nav-item nav-link">Logoff</a>
+             </div>
+         </div>
+     </nav>
+
+     <!-- Menu Start -->
+     <div class="container-xxl py-5">
+          <div class="container">
+               <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                         <h1 class="section-title ff-secondary text-center text-primary fw-normal">Menu</h1>
+                     </div>
+                </div>
+                <div class="p-3 text-left">
+                   <img src="{{restaurant.arquivo}}" align="left" style="padding-right: 0.5rem; width: 12%;"> <h3>{{restaurant.name}}</h3>
+                    {{restaurant.description}} <br>
+                    {{restaurant.address}} {{restaurant.number}}, {{restaurant.district}} - {{restaurant.phone}} - {{restaurant.complement}}
+                </div>
+
+              <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="tab-content">
+                      <div id="tab-1" class="tab-pane fade show p-0 active">
+                          <div class="row g-4">
+                              <div class="col-lg-6" *ngFor="let menu of menu let i = index">
+                                  <div class="d-flex service-item rounded">
+                                      <div class="w-100 d-flex flex-column">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{menu.arquivo}}" style="width: 100%">
+                                          <h5 class="d-flex border-bottom pt-1">{{menu.name}} <span class="text-primary">&nbsp;R${{menu.price}}</span></h5>
+                                          <small class="d-flex pt-1"> {{menu.description}}</small>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Menu End -->
+
+
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light footer pt-4 mt-6 wow fadeIn" data-wow-delay="0.1s">
+         <div class="container">
+             <div class="copyright">
+                 <div class="row">
+                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0"> &copy;
+                         <a class="border-bottom" href="#">Boca Cheia Delivery</a><br>
+                         All Right Reserved. Designed By
+                         <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br>
+                         Distributed By
+                         <a class="border-bottom" href="https://themewagon.com" target="_blank">
+                             ThemeWagon
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- Footer End -->
+ </div>

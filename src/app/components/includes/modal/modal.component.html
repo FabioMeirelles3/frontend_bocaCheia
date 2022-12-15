@@ -1,0 +1,17 @@
+<div id="excluir-modal" class="modal" tabindex="-1" role="dialog" *ngIf="modalServices.open">
+     <div class="modal-dialog modal-top">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h4 class="modal-title" id="topModalLabel">{{modalServices.modalTitle}}</h4>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+             </div>
+             <div class="modal-body">
+                 <h5>{{modalServices.modalDestaque}}</h5>
+                 {{modalServices.modalText}}
+             </div>
+             <div class="modal-footer">
+                 <a (click)="execute()"><button type="button" class="btn btn-danger">Confirmar</button></a>
+             </div>
+         </div><!-- /.modal-content -->
+     </div><!-- /.modal-dialog -->
+   </div>

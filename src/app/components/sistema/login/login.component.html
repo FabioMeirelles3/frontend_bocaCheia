@@ -1,0 +1,75 @@
+<div class="container-xxl bg-white p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-3">
+        <a href="" class="navbar-brand p-0">
+            <img src="assets/img/icon.png" align="left"><h1 class="text-primary m-0">Boca Cheia</h1>
+        </a>
+    </nav>
+    <!-- Navbar & Hero Start -->
+    <div class="container-xxl position-relative p-0">
+        <div class="container-xxl py-5 bg-dark hero-header mb-6">
+            <div class="container my-5 py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-3 text-white animated slideInLeft">Acesse seus restaurantes prediletos!!</h1>
+                    </div>
+                    <div class="col-lg-6  text-lg-start overflow-hidden text-white">
+                        <div class="card-body">
+                            <form role="form" [formGroup]="formLogin" #formDir="ngForm" (ngSubmit)="userLogin()">
+                                <div class="mb-2" *ngIf="erro == true">
+                                    <div class="alert alert-danger">
+                                        <i class=""></i> <b>Erro</b> Seu login falhou, verifique os dados informados.
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <p>Adicione seu login e senha para acessar o aplicativo.</p>
+                                    <label for="login" class="animated slideInLeft">Login</label>
+                                    <input class="form-control" type="text" id="login" formControlName="login"
+                                        placeholder="Adicione seu login">
+                                </div>
+                                <div class="mb-2">
+                                    <div *ngIf="login.invalid && formDir.submitted" class="validation-error">
+                                        <p *ngIf="login.errors?.['required']">{{requires.login}}</p>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="password" class="animated slideInLeft">Password</label>
+                                    <div class="input-group input-group-merge">
+                                        <input type="password" id="password" class="form-control"
+                                            formControlName="password" placeholder="Adicione sua senha">
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div *ngIf="password.invalid && formDir.submitted" class="validation-error">
+                                        <p *ngIf="password.errors?.['required']">{{requires.password}}</p>
+                                    </div>
+                                </div>
+                                <div class="d-grid text-center">
+                                    <button class="btn btn-primary" type="submit">Entrar </button>
+                                </div>
+                            </form>
+                        </div> <!-- end .card-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer pt-4 mt-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-1"> &copy;
+                    <a class="border-bottom" href="#">Boca Cheia Delivery</a><br>
+                    All Right Reserved. Designed By
+                    <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br>
+                       Distributed By
+                    <a class="border-bottom" href="https://themewagon.com" target="_blank">
+                       ThemeWagon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Footer End -->
+</div>

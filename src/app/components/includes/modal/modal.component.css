@@ -1,0 +1,13 @@
+.modal {
+     display: block;
+     top: 5px;
+   }
+
+   .modal-top {
+     box-shadow: 10px 0 10px 0 rgb(0 0 0 / 15%), 0 10px 90px 5px rgb(0 0 0 / 50%);
+   }
+
+   .btn-close {
+     position: absolute;
+     right: 10px;
+   }
