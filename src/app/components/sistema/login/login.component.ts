@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
     if(this.formLogin.invalid) return;
     var user = this.formLogin.getRawValue() as IUser;
     this.userService.login(user).subscribe((response) => {
-      console.log(response);
         this.erro = false;
 
         if(!response.sucesso){

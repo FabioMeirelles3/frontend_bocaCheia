@@ -56,8 +56,6 @@ export class RestaurantComponent implements OnInit {
     if(this.searchForm.invalid) { return }
 
     if(this.searchForm.value.search){
-      console.log(this.searchForm.value.search);
-
       let resta = this.restaurant.filter(rest => {
         return rest.name?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(this.searchForm.value.search.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
       });
